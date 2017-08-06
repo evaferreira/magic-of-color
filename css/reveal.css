@@ -1354,3 +1354,45 @@ body {
 
 .zoomed .reveal .roll span:after {
   visibility: hidden; }
+
+/*********************************************
+ * Eva's Styles
+ *********************************************/
+.reveal .white h1,
+.reveal .white h2,
+.reveal .white h3,
+.reveal .white h4,
+.reveal .white h5,
+.reveal .white h6 {
+  background-color: #fff; }
+
+.light {
+  opacity: 0.7; }
+
+.left {
+  text-align: left; }
+
+.hey {
+  font-style: italic; }
+
+.incomplete:after {
+  content: 'INCOMPLETE';
+  font-weight: bold;
+  position: absolute;
+  top: 12%;
+  right: 1%;
+  padding: .1em .4em 0;
+  border: .1em solid;
+  color: red;
+  font-size: 140%;
+  border-radius: .2em;
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg); }
+
+.rainbow {
+  width: 300px;
+  height: 150px;
+  display: inline-block;
+  border-top-left-radius: 300px;
+  border-top-right-radius: 300px;
+  background-image: radial-gradient(at center bottom, transparent 30%, transparent 35%, purple 35%, purple 40%, violet 40%, violet 45%, blue 45%, blue 50%, skyblue 50%, skyblue 55%, yellow 55%, yellow 60%, orange 60%, orange 65%, red 65%, red 70%, beige 80%); }
