@@ -61,6 +61,13 @@ body {
   text-transform: uppercase;
 }
 
+.special-purple{
+  background-color: purple;
+}
+.special-purple h1{
+  color: #fff;
+}
+
 .reveal h2 {
   font-size: 1.6em; }
 
