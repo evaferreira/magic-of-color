@@ -29,7 +29,7 @@ $headingLetterSpacing: normal;
 $headingTextTransform: uppercase;
 $headingFontWeight: 600;
 $linkColor: #2a76dd;
-$linkColorHover: lighten( $linkColor, 15% );
+$linkColorHover: lighten( $linkColor, 10% );
 $selectionBackgroundColor: lighten( $linkColor, 25% );
 
 $heading1Size: 2.5em;
@@ -42,6 +42,23 @@ section.has-dark-background {
 		color: #fff;
 	}
 }
+
+.reveal h1 {
+	font-size: 2.5em;
+}
+
+.reveal h1.title{
+	text-transform: uppercase;
+}
+
+.special-purple{
+	background-color: purple;
+}
+.special-purple h1{
+	color: #fff;
+}
+
+$headingTextTransform: none;
 
 
 // Theme template ------------------------------

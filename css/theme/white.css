@@ -7,6 +7,18 @@
 section.has-dark-background, section.has-dark-background h1, section.has-dark-background h2, section.has-dark-background h3, section.has-dark-background h4, section.has-dark-background h5, section.has-dark-background h6 {
   color: #fff; }
 
+.reveal h1 {
+  font-size: 2.5em; }
+
+.reveal h1.title {
+  text-transform: uppercase; }
+
+.special-purple {
+  background-color: purple; }
+
+.special-purple h1 {
+  color: #fff; }
+
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
@@ -50,23 +62,12 @@ body {
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: normal;
+  text-transform: none;
   text-shadow: none;
   word-wrap: break-word; }
 
 .reveal h1 {
-  font-size: 2.5em;
- }
-
-.reveal h1.title{
-  text-transform: uppercase;
-}
-
-.special-purple{
-  background-color: purple;
-}
-.special-purple h1{
-  color: #fff;
-}
+  font-size: 2.5em; }
 
 .reveal h2 {
   font-size: 1.6em; }
@@ -228,7 +229,7 @@ body {
   transition: color .15s ease; }
 
 .reveal a:hover {
-  color: #6ca0e8;
+  color: #5692e4;
   text-shadow: none;
   border: none; }
 
@@ -279,16 +280,16 @@ body {
   border-top-color: #2a76dd; }
 
 .reveal .controls .navigate-left.enabled:hover {
-  border-right-color: #6ca0e8; }
+  border-right-color: #5692e4; }
 
 .reveal .controls .navigate-right.enabled:hover {
-  border-left-color: #6ca0e8; }
+  border-left-color: #5692e4; }
 
 .reveal .controls .navigate-up.enabled:hover {
-  border-bottom-color: #6ca0e8; }
+  border-bottom-color: #5692e4; }
 
 .reveal .controls .navigate-down.enabled:hover {
-  border-top-color: #6ca0e8; }
+  border-top-color: #5692e4; }
 
 /*********************************************
  * PROGRESS BAR

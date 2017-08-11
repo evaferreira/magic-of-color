@@ -1366,6 +1366,11 @@ body {
 .reveal .white h6 {
   background-color: #fff; }
 
+.subtitle {
+  font-weight: normal;
+  opacity: 0.8;
+  text-transform: capitalize; }
+
 .light {
   opacity: 0.7; }
 
