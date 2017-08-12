@@ -1358,6 +1358,24 @@ body {
 /*********************************************
  * Eva's Styles
  *********************************************/
+.main {
+  height: 50vh;
+  background-position: center center;
+  background-size: 100% 100%;
+  background-image: radial-gradient(90vw, transparent 10%, transparent 15%, purple 15%, purple 20%, violet 20%, violet 25%, blue 25%, blue 30%, skyblue 30%, skyblue 35%, yellow 35%, yellow 40%, orange 40%, orange 45%, red 45%, red 50%, beige 50%);
+  -webkit-animation: bg 5s infinite ease-in;
+          animation: bg 5s infinite ease-in; }
+  .main h1.title {
+    margin-top: 9vh; }
+
+@-webkit-keyframes bg {
+  50% {
+    background-size: 220% 220%; } }
+
+@keyframes bg {
+  50% {
+    background-size: 220% 220%; } }
+
 .reveal .white h1,
 .reveal .white h2,
 .reveal .white h3,
@@ -1368,7 +1386,7 @@ body {
 
 .subtitle {
   font-weight: normal;
-  opacity: 0.8;
+  opacity: 0.9;
   text-transform: capitalize; }
 
 .light {
@@ -1376,6 +1394,10 @@ body {
 
 .left {
   text-align: left; }
+
+.img-big {
+  -webkit-transform: scale(2);
+          transform: scale(2); }
 
 .hey {
   font-style: italic; }

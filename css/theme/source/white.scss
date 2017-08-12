@@ -28,7 +28,7 @@ $headingTextShadow: none;
 $headingLetterSpacing: normal;
 $headingTextTransform: uppercase;
 $headingFontWeight: 600;
-$linkColor: #2a76dd;
+$linkColor: #1d6bd5;;
 $linkColorHover: lighten( $linkColor, 10% );
 $selectionBackgroundColor: lighten( $linkColor, 25% );
 
@@ -51,13 +51,21 @@ section.has-dark-background {
 	text-transform: uppercase;
 }
 
-.special-purple{
-	background-color: purple;
-	height: 50vh;
+.special{
+	height: 60vh;
 }
-.reveal .special-purple h1{
+.purple{
+	background-color: purple;
+}
+.blue{
+	background-color: #000480;
+}
+.pink{
+	background-color: #AC0753;
+}
+.reveal .special h1{
 	color: #fff;
-	line-height: 50vh;
+	line-height: 60vh;
 }
 
 $headingTextTransform: none;
