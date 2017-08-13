@@ -25,9 +25,14 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 .pink {
   background-color: #AC0753; }
 
-.reveal .special h1 {
+.reveal .special h1, .reveal .special h2 {
   color: #fff;
   line-height: 60vh; }
+
+.showcase {
+  background-color: var(--bg, pink); }
+  .reveal .showcase h2 {
+    text-shadow: 1px 1px 4px #000, -1px -1px 4px #000; }
 
 /*********************************************
  * GLOBAL STYLES
