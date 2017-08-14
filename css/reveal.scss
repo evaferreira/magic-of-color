@@ -1481,8 +1481,8 @@ body {
 	background-size: 100% 100%;
 
 	// Could be turned into linear
-	background-image: radial-gradient( 90vw,
-		transparent 10%, transparent 15%,
+	background-image: radial-gradient( 90vmin,
+		beige 10%, beige 15%,
 		purple 15%, purple 20%, 
 		violet 20%, violet 25%,
 		blue 25%, blue 30%,
