@@ -70,10 +70,11 @@ section.has-dark-background {
 
 .showcase{
 	background-color: var(--bg, pink);
-
-	.reveal & h2{
-		text-shadow: 1px 1px 4px #000, -1px -1px 4px #000;
-	}
+}
+li.showcase{
+	padding-right: 24px;
+	padding-left: 24px;
+	margin: 12px 0;
 }
 
 $headingTextTransform: none;
