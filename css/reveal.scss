@@ -1493,12 +1493,13 @@ body {
 		beige 50%
 	);
 
-	animation: bg 5s infinite ease-in;
+	//animation: bg 5s infinite ease-in;
 
 	h1.title{
 		margin-top: 9vh;
 	}
 }
+
 @keyframes bg{
 	50%{
 		background-size: 220% 220%;

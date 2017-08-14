@@ -1362,9 +1362,7 @@ body {
   height: 50vh;
   background-position: center center;
   background-size: 100% 100%;
-  background-image: radial-gradient(90vw, transparent 10%, transparent 15%, purple 15%, purple 20%, violet 20%, violet 25%, blue 25%, blue 30%, skyblue 30%, skyblue 35%, yellow 35%, yellow 40%, orange 40%, orange 45%, red 45%, red 50%, beige 50%);
-  -webkit-animation: bg 5s infinite ease-in;
-          animation: bg 5s infinite ease-in; }
+  background-image: radial-gradient(90vw, transparent 10%, transparent 15%, purple 15%, purple 20%, violet 20%, violet 25%, blue 25%, blue 30%, skyblue 30%, skyblue 35%, yellow 35%, yellow 40%, orange 40%, orange 45%, red 45%, red 50%, beige 50%); }
   .main h1.title {
     margin-top: 9vh; }
 

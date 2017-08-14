@@ -54,15 +54,11 @@ section.has-dark-background {
 .special{
 	height: 60vh;
 }
-.purple{
-	background-color: purple;
+
+span.white{
+	color: #fff;
 }
-.blue{
-	background-color: #000480;
-}
-.pink{
-	background-color: #AC0753;
-}
+
 .reveal .special h1, .reveal .special h2{
 	color: #fff;
 	line-height: 60vh;
@@ -71,7 +67,7 @@ section.has-dark-background {
 .showcase{
 	background-color: var(--bg, pink);
 }
-li.showcase{
+li.showcase, span.showcase{
 	padding-right: 24px;
 	padding-left: 24px;
 	margin: 12px 0;
