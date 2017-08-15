@@ -174,7 +174,7 @@
 					<ul>
 						<li class="fragment">Hexadecimal: #FF0000</li>
 						<li class="fragment">Decimal: rgb(255, 0, 0)</li>
-						<li class="fragment">Decimal with %: rgb(255%, 0%, 0%)</li>
+						<li class="fragment">Decimal with %: rgb(100%, 0%, 0%)</li>
 					</ul>
 				</section>
 
@@ -245,6 +245,10 @@
 
 				<section>
 					<img src="img/peru.png" alt="Peru's flag: red, white, red">
+				</section>
+
+				<section data-background-color="tan">
+					<h2>Tan? Really?!</h2>
 				</section>
 
 				<!-- Not just funny and confusing names, also lacks consistency -->
@@ -397,6 +401,20 @@
 					<h1>HSL</h1>
 				</section>
 
+				<section class="left">
+					<h2>HSL/A</h2>
+					<ul>
+						<li class="fragment">Hue (<span class="hey">'color'</span>)</li>
+						<li class="fragment">Saturation</li>
+						<li class="fragment">Lightness</li>
+					</ul>
+				</section>
+
+				<section class="left">
+					<h2>Hue</h2>
+					<img src="img/color-wheel.png" alt="Color Wheel">
+				</section>
+
 				<section data-background-color="#d1b48c">
 					<a href="https://codepen.io/thebabydino/full/ZJbqmd/" target="_blank">
 						<img src="img/hsl-anatudor.jpg" alt="Interactive demo showing a HSL bicone. Hue goes all around the cone. Hue goes from 0% on the central vertical axis of the bicone to 100% on the surface of the cone. Lightness axis goes from 0% at the vertex of the bottom cone to 100% at the vertex of the top one">
@@ -404,10 +422,62 @@
 				</section>
 
 				<!-- cylinder vs cone/bicone --> 
-				<section class="hsl-iframe">
+				<section class="iframe">
 					<iframe src="https://codepen.io/thebabydino/full/ZJbqmd/" frameborder="0"></iframe>
 				</section>
 
+				<section class="incomplete iframe">
+					<h2>HSL</h2>
+					<p>Same saturación, misma luminosidad</p>
+					<iframe src="demos/hue-rotate.html" onload="resizeIframe(this)"></iframe>
+				</section>
+				
+				<section class="incomplete iframe">
+					<h2>HSL</h2>
+					<iframe src="demos/colores.html" onload="resizeIframe(this)"></iframe>
+				</section>
+				
+				<section class="incomplete iframe">
+					<h2>HSL Animation</h2>
+					<iframe src="demos/colores.html" onload="resizeIframe(this)"></iframe>
+				</section>
+
+				<!-- Intuitive -->
+				<section class="left">
+					<h2>HSL/A</h2>
+					<ul>
+						<li>Specific</li>
+						<li>Hard to remember</li>
+						<li class="fragment">Easy to modify</li>
+						<li class="fragment">Ideal for transitions & animations</li>
+						<li class="fragment">Alpha works everywhere</li>
+					</ul>
+				</section>
+
+				<section data-background-color="crimson">
+					<h1>HWB</h1>
+				</section>
+
+				<!-- youtube video svgeesus -->
+				<section class="incomplete" data-background-color="gold">
+					<h1>lab & lch</h1>
+				</section>
+
+				<section data-background-color="Indigo">
+					<h1>Why so many?</h1>
+				</section>
+
+				<section data-background-color="Orange">
+					<h1>Gray() function</h1>
+				</section>
+
+				<section data-background-color="MediumSeaGreen">
+					<h1>Not grey()</h1>
+				</section>
+
+				<section class="incomplete" data-background-color="MediumSeaGreen">
+					<h1>Define greys with your team STYLEGUIDE ALL THE THINGS</h1>
+				</section>
 
 
 
@@ -418,6 +488,14 @@
 					No a11y twitter
 
 					ui preferences going to media queries
+
+					Converting: https://drafts.csswg.org/css-color/#hsl-to-rgb
+					sass can get you the % of r / g / b
+
+					data viz -> color (--var) send var through JS apply saturation/lightness
+
+					RGB without commas -> Works in Firefox 
+						background: rgb(157 23 12 / 20%);
 				-->
 
 
