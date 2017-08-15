@@ -1421,3 +1421,7 @@ body {
   border-top-left-radius: 300px;
   border-top-right-radius: 300px;
   background-image: radial-gradient(at center bottom, transparent 30%, transparent 35%, purple 35%, purple 40%, violet 40%, violet 45%, blue 45%, blue 50%, skyblue 50%, skyblue 55%, yellow 55%, yellow 60%, orange 60%, orange 65%, red 65%, red 70%, beige 80%); }
+
+.hsl-iframe iframe {
+  width: 80vw;
+  min-height: 60vh; }

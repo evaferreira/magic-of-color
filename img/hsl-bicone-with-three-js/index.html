@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>HSL bicone with three.js</title>
+  
+  
+  
+      <style>
+      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+      @charset "UTF-8";
+* {
+  margin: 0;
+}
+
+input {
+  position: absolute;
+  left: -100vw;
+}
+input:checked + label {
+  --ctrl-c: #e18728;
+}
+
+label {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  padding: 0.5em 0.5em 0.5em 2em;
+  background: #262626;
+  color: var(--ctrl-c, #d9d9d9);
+  font: 1.5rem trebuchet ms, tahoma, sans-serif;
+  cursor: pointer;
+}
+label:before {
+  position: absolute;
+  left: .5em;
+  top: 50%;
+  margin-top: -0.5em;
+  width: 1em;
+  height: 1em;
+  box-shadow: 0 0 0 2px var(--ctrl-c, #d9d9d9);
+  color: var(--ctrl-c, transparent);
+  line-height: 1;
+  text-align: center;
+  content: "✔";
+}
+
+canvas {
+  display: block;
+}
+
+    </style>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+  <input id="explode" type="checkbox"/>
+<label for="explode">explode</label>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/86/three.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>
