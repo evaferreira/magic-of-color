@@ -1425,3 +1425,6 @@ body {
 .iframe iframe {
   width: 80vw;
   min-height: 60vh; }
+
+.no-padding {
+  padding-left: 0; }
