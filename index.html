@@ -494,7 +494,7 @@
 				</section>
 
 				<section>
-					<h2>That's all for CSS 3!</h2>
+					<h2>That's all for CSS Color Level 3!</h2>
 				</section>
 
 				<section data-background-image="img/back1.jpg" class="white">
@@ -502,16 +502,16 @@
 				</section>
 
 				<section data-background-color="ForestGreen">
-					<h1>CSS 4/5</h1>
+					<h1>CSS Color Level 4</h1>
+					<h2>Wor
 				</section>
 
 				<section class="left incomplete">
-					<h2>CSS 4/5</h2>
+					<h2>CSS Color Level 4</h2>
 					<ul>
 						<li>HWB</li>
 						<li>lab & lch</li>
 						<li>gray</li>
-						<li>color-mod</li>
 						<li>color</li>
 						<li class="fragment">Optional commas</li>
 					</ul>
@@ -535,11 +535,30 @@
 					<h2>We'll get to that!</h2>
 				</section>
 
+				<section data-background-color="PowderBlue">
+					<h1>Optional commas</h1>
+				</section>
+
+				<!-- In RGB and HSL, no need for A -->
+				<section class="incomplete iframe">
+					<h2>Optional commas</h2>
+					<iframe src="demos/colores.html"></iframe>
+				</section>
+
+				<section data-background-color="PowderBlue">
+					<h1>Hey!</h1>
+					<h2>Can we use this?!</h2>
+				</section>
+
+				<section><img src="img/optional-commas.png" alt="Unknown caniuse.com table"></section>
+
 				<section data-background-color="crimson">
 					<h1>HWB</h1>
 				</section>
 
-				<!-- youtube video svgeesus -->
+				<!-- youtube video svgeesus
+					 Devide independent color
+				 -->
 				<section class="incomplete" data-background-color="gold">
 					<h1>lab & lch</h1>
 				</section>
@@ -548,12 +567,8 @@
 					<h1>Color() function</h1>
 				</section>
 
-				<section data-background-color="Indigo">
+				<section class="incomplete" data-background-color="Indigo">
 					<h1>Why so many?</h1>
-				</section>
-
-				<section class="incomplete" data-background-color="MediumSeaGreen">
-					<h1>Color-mod() function</h1>
 				</section>
 
 				<section data-background-color="Orange">
@@ -566,6 +581,10 @@
 
 				<section class="incomplete" data-background-color="MediumSeaGreen">
 					<h1>Define greys with your team STYLEGUIDE ALL THE THINGS</h1>
+				</section>
+
+				<section class="incomplete" data-background-color="purple">
+					<h1>CSS Custom Properties</h1>
 				</section>
 
 
@@ -585,6 +604,19 @@
 
 					RGB without commas -> Works in Firefox 
 						background: rgb(157 23 12 / 20%);
+
+					https://drafts.csswg.org/css-color/#contrast-adjuster
+
+					Does it work... anywhere? No.
+							Editor's draft, not ready yet for implementation
+
+					Can i use it? :evilsmile: Yes.
+							PostCSS, beware of un-updated CSS color() function
+								It might not be future-proof.
+
+					Color Android OS change accoding to preference
+
+					URL to spec -> GitHub
 				-->
 
 
