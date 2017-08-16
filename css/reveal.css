@@ -1400,6 +1400,9 @@ body {
 .hey.hey.hey {
   font-style: italic; }
 
+.smaller-font.smaller-font {
+  font-size: 0.7em; }
+
 .incomplete:after {
   content: 'INCOMPLETE';
   font-weight: bold;
