@@ -428,10 +428,6 @@
 					</ul>
 				</section>
 
-				<section>
-					<img src="img/color-wheel.png" alt="Color Wheel">
-				</section>
-
 				<section class="incomplete" data-background-color="#d1b48c">
 					<a href="https://codepen.io/thebabydino/full/ZJbqmd/" target="_blank">
 						<img src="img/hsl-anatudor.jpg" alt="Interactive demo showing a HSL bicone. Hue goes all around the cone. Hue goes from 0% on the central vertical axis of the bicone to 100% on the surface of the cone. Lightness axis goes from 0% at the vertex of the bottom cone to 100% at the vertex of the top one">
@@ -443,20 +439,46 @@
 					<iframe src="https://codepen.io/thebabydino/full/ZJbqmd/" frameborder="0"></iframe>
 				</section>
 
+				<section>
+					<img src="img/color-wheel.png" alt="Color Wheel">
+				</section>
+				
+				<section class="incomplete">
+					<h2>Hue is a circle, so it takes degrees</h2>
+					<pre><code data-trim>
+		.el{
+		  background-color: hsl(270, 60%, 60%);
+		}
+					</code></pre>
+				</section>
+
 				<section class="incomplete iframe">
 					<h2>HSL</h2>
 					<p>Same saturación, misma luminosidad</p>
-					<iframe src="demos/hue-rotate.html" onload="resizeIframe(this)"></iframe>
+					<iframe src="demos/hue-rotate.html"></iframe>
 				</section>
 				
 				<section class="incomplete iframe">
 					<h2>HSL</h2>
-					<iframe src="demos/colores.html" onload="resizeIframe(this)"></iframe>
+					<iframe src="demos/colores.html"></iframe>
 				</section>
 				
+				<!-- "A little darker", "a little lighter" -->
 				<section class="incomplete iframe">
-					<h2>HSL Animation</h2>
-					<iframe src="demos/colores.html" onload="resizeIframe(this)"></iframe>
+					<h2>Transitions</h2>
+					<iframe src="demos/colores.html"></iframe>
+				</section>
+				
+				<!-- Unicorn animations -->
+				<section class="incomplete iframe">
+					<h2>Animations</h2>
+					<iframe src="demos/colores.html"></iframe>
+				</section>
+				
+				<!-- Gradients too -->
+				<section class="incomplete iframe">
+					<h2>Animations</h2>
+					<iframe src="demos/colores.html"></iframe>
 				</section>
 
 				<!-- Intuitive -->
@@ -475,7 +497,7 @@
 					<h2>That's all for CSS 3!</h2>
 				</section>
 
-				<section data-background-image="" class="incomplete">
+				<section data-background-image="img/back1.jpg" class="white">
 					<h1>To the future!</h1>
 				</section>
 
