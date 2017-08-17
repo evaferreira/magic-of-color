@@ -333,26 +333,27 @@
 					<h2 class="fragment">From 0 to 9 & A to F</h2>
 				</section>
 
-				<section class="left incomplete">
+				<!-- 4096 possible instead of 17 million -->
+				<section class="left">
 					<h2>Hex values</h2>
 					<ul>
-						<li class="fragment">3 digits #RGB</li>
-						<li class="fragment">6 digits #RRGGBB</li>
+						<li class="fragment">3 digits #<span class="red">R</span><span class="green">G</span><span class="blue">B</span></li>
+						<li class="fragment">6 digits #<span class="red">RR</span><span class="green">GG</span><span class="blue">BB</span></li>
 					</ul>
 				</section>
 				
-				<section class="left incomplete">
+				<section class="left">
 					<h2>Hex with alpha</h2>
 					<ul>
 						<li class="fragment">
-							<span>4 digits #RGBA</span>
-							<span class="fragment smaller-font">(Beware! 9 is 50%)</span>
+							<span>4 digits #<span class="red">R</span><span class="green">G</span><span class="blue">B</span>A</span>
+							<span class="fragment smaller-font">(Beware!!)</span>
 						</li>
-						<li class="fragment">8 digits #RRGGBBAA</li>
+						<li class="fragment">8 digits #<span class="red">RR</span><span class="green">GG</span><span class="blue">BB</span>AA</li>
 					</ul>
 				</section>
 
-				<section class="incomplete"><img src="img/hex-alpha.png" alt="Compatibility table, works in Firefox and Safari currently being implemented in Chrome"></section>
+				<section><img src="img/hex-alpha.png" alt="Compatibility table, works in Firefox and Safari currently being implemented in Chrome"></section>
 
 				<section>
 					<h2>They also have funny names!</h2>
@@ -529,8 +530,14 @@
 					<img src="img/shopping.gif" alt="Mean Girls quote 'Get in loser, we are going shopping!'. 'Shopping' has been turned into 'Coding'">
 				</section>
 
-				<section class="incomplete">
-					<h2>We'll get to that!</h2>
+				<section class="left incomplete">
+					<h2>CSS Color Level 4</h2>
+					<ul>
+						<li class="fragment">Theming</li>
+						<li class="fragment">Customization</li>
+						<li class="fragment">Device-independent colors</li>
+						<li class="fragment">A11y</li>
+					</ul>
 				</section>
 
 				<section class="left incomplete">
@@ -546,6 +553,15 @@
 
 				<section data-background-color="PowderBlue">
 					<h1>Optional commas</h1>
+				</section>
+
+				<section>
+					<h2>Optional commas</h2>
+					<pre><code data-trim>
+		.el{
+		  color: rgb(255 0 0 / 20%);
+		}
+					</code></pre>
 				</section>
 
 				<!-- In RGB and HSL, no need for A -->
@@ -616,6 +632,19 @@
 
 				<!-- 
 
+
+					Reasons for theming (by design and dev team, finite options):
+						. Brand
+						. Different types of clients
+						. User's pick (customization by user's, infinite options. Twitter)
+						. BBC news, BBC etc...
+
+					Avoid if possible, only change UI, try to keep UX the same way.
+					Theming colors, only colors
+					Add link to Harry Roberts' talk at CSSConf AU 2015
+						--theme: variable
+						lighten -> HSL
+					
 					HSL Color in tables to indicate heat
 
 					No a11y twitter
@@ -648,21 +677,14 @@
 
 					slider (range) for color, hsl, lightness up, black background
 					slider (range) for color, hsl, lightness down, light background
+						Hue ROTATE
 
+					Contrast Ratio checker -> Remy Sharp
 				-->
 
 
 
 
-
-				<section class="incomplete">
-					<h2>This</h2>
-					<pre><code data-trim>
-		.el{
-		  background: red;
-		}
-					</code></pre>
-				</section>
 			</div>
 		</div>
 
