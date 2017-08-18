@@ -176,9 +176,9 @@
 				<section class="left">
 					<h2>RGB</h2>
 					<ul>
-						<li class="fragment">Hexadecimal: #FF0000</li>
-						<li class="fragment">Decimal: rgb(255, 0, 0)</li>
-						<li class="fragment">Decimal with %: rgb(100%, 0%, 0%)</li>
+						<li class="fragment">Hexadecimal: #<span class="red">FF</span><span class="green">00</span><span class="blue">00</span></li>
+						<li class="fragment">Decimal: rgb(<span class="red">255</span>, <span class="green">0</span>, <span class="blue">0</span>)</li>
+						<li class="fragment">Decimal with %: rgb(<span class="red">100%</span>, <span class="green">0%</span>, <span class="blue">0%</span>)</li>
 					</ul>
 				</section>
 
@@ -453,21 +453,11 @@
 
 				<!-- Same saturation, different hue -->
 				<section class="incomplete iframe">
-					<div class="demo">
-						<div id="hue" class="demo-element demo-horizontal">
-							
-						</div>
-						<style contenteditable class="demo-textarea">
-#hue{
-	background-color: hsl(270, 60%, 60%);
-}
-						</style>
-					</div><!-- closes .demo -->
+					<iframe src="demos/hue-rotate.html"></iframe>
 				</section>
 				
 				<section class="incomplete iframe">
-					<h2>HSL</h2>
-					<iframe src="demos/colores.html"></iframe>
+					<iframe src="demos/hsl.html"></iframe>
 				</section>
 				
 				<!-- "A little darker", "a little lighter" -->
@@ -713,11 +703,6 @@
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
 			});
-		</script>
-
-		<script src="js/incrementable.js"></script>
-		<script>
-			new Incrementable(document.getElementsByClassName('demo-textarea'));
 		</script>
 	</body>
 </html>

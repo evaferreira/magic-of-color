@@ -1440,24 +1440,3 @@ body {
 
 .blue {
   color: blue; }
-
-/* 
-
-	Demo
-
-*/
-.demo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-  .demo-element {
-    -ms-flex-preferred-size: 70%;
-        flex-basis: 70%;
-    height: 300px;
-    line-height: 300px; }
-  .demo-textarea {
-    display: block;
-    background-color: rgba(255, 255, 255, 0.9);
-    font-family: monospace;
-    text-align: left;
-    padding-left: 24px; }

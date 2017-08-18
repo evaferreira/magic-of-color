@@ -3,19 +3,24 @@
 <head>
     <meta charset="utf-8">
     <title>Hue</title>
+
+    <link rel="stylesheet" href="css/demos.css">
 </head>
 <body>
-    <div class="demo">
-
-        <div id="hue">
-            Hue
-        </div>
-        <style contenteditable style="display: block;">
-            #hue{
-                background-color: red;
-            }
+    
+	<div class="demo">
+		<div id="hue" class="demo-element demo-horizontal"></div>
+        
+        <style contenteditable class="demo-textarea">
+    #hue{
+        background-color: hsl(270, 60%, 60%);
+    }
         </style>
-
-    </div>
+	</div><!-- closes .demo -->
+	
+    <script src="js/incrementable.js"></script>
+	<script>
+		new Incrementable(document.getElementsByClassName('demo-textarea'));
+	</script>
 </body>
 </html>
