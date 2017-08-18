@@ -451,10 +451,18 @@
 					</code></pre>
 				</section>
 
+				<!-- Same saturation, different hue -->
 				<section class="incomplete iframe">
-					<h2>HSL</h2>
-					<p>Same saturación, misma luminosidad</p>
-					<iframe src="demos/hue-rotate.html"></iframe>
+					<div class="demo">
+						<div id="hue" class="demo-element demo-horizontal">
+							
+						</div>
+						<style contenteditable class="demo-textarea">
+#hue{
+	background-color: hsl(270, 60%, 60%);
+}
+						</style>
+					</div><!-- closes .demo -->
 				</section>
 				
 				<section class="incomplete iframe">
@@ -609,13 +617,13 @@
 
 				<section><img src="img/styleguide.png" alt="Styleguide All The Things"></section>
 
-				<section>
+				<section class="left">
 					<h2 class="hey"><span class="fragment">Dear Designers:</span><br>
 						<span class="fragment">Developers are your friends.</span>
 					</h2>
 				</section>
 
-				<section>
+				<section class="left">
 					<h2 class="hey"><span class="fragment">Dear Developers:</span><br>
 						<span class="fragment">Designers are your friends.</span>
 					</h2>
@@ -705,6 +713,11 @@
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
 			});
+		</script>
+
+		<script src="js/incrementable.js"></script>
+		<script>
+			new Incrementable(document.getElementsByClassName('demo-textarea'));
 		</script>
 	</body>
 </html>
