@@ -62,12 +62,15 @@ textarea{
 .element-tres{
 	background-color: #F00;
 }
+.element-tres:hover{
+	filter: hue-rotate(360deg);
+}
 
 .element-cuatro{
 	background-image: radial-gradient(300px, red, purple, blue, pink, violet, yellow);
 	transition: filter 5s;
 }
 
-.element-cuatro:hover, .element-tres:hover{
+.element-cuatro:hover{
 	filter: hue-rotate(360deg);
 }
