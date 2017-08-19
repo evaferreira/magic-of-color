@@ -63,26 +63,6 @@ var self = window.CSSSnippet = function(element) {
 	
 	this.raw = this.getCSS().indexOf('{') > -1;
 	
-	if (window.SlideShow) {
-		this.slide = SlideShow.getSlide(element);
-		
-		// Remove it after we're done with it, to save on resources
-		addEventListener('hashchange', function() {
-			if(location.hash == '#' + me.slide.id) {
-				me.update();
-			}
-			else if(me.raw) {
-				head.removeChild(me.style);
-			}
-		}, false);
-		
-		if(location.hash == '#' + me.slide.id) {
-			this.update();
-		}
-	}
-	else {
-		this.update();
-	}
 }
 
 self.prototype = {

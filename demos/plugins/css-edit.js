@@ -44,19 +44,6 @@ var self = window.CSSEdit = {
 			subjects = element.hasAttribute('data-subject')? [element] : [];
 		}
 		
-		if (/^(input|textarea)$/i.test(element.nodeName)) {
-			// If no subject specified, it will be the slide
-			if(!subjects.length) {
-				// Find containing slide
-				var slide = SlideShow.getSlide(element.parentNode);
-				
-				subjects = [slide? slide : element];
-			}
-		}
-		else {
-			subjects.unshift(element);
-		}
-		
 		return subjects;
 	},
 	

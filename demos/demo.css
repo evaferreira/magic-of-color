@@ -40,5 +40,5 @@ textarea{
 .element{
 	width: 180px;
 	height: 180px;
-	background-color: purple;
+	background-color: hsl(45, 70%, 50%);
 }
