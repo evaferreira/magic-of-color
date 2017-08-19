@@ -1,26 +1,43 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>Hue</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<title>Title, duh!</title>
+	<meta name="author" content="Here goes your name, you beautiful code-maker">
 
-    <link rel="stylesheet" href="css/demos.css">
+	<link href="demo.css" rel="stylesheet">
+	<script src="prefixfree.min.js"></script>
+	
 </head>
 <body>
-    
-	<div class="demo">
-		<div id="hue" class="demo-element demo-horizontal"></div>
-        
-        <style contenteditable class="demo-textarea">
-    #hue{
-        background-color: hsl(270, 60%, 60%);
-    }
-        </style>
-	</div><!-- closes .demo -->
+
 	
-    <script src="js/incrementable.js"></script>
-	<script>
-		new Incrementable(document.getElementsByClassName('demo-textarea'));
-	</script>
+	<section class="live demo slide example">
+			<textarea class="shape-snippet left col">
+.element{
+  background-color: #F00;
+  transition: filter 5s;
+}
+
+.element:hover{
+  filter: hue-rotate(360deg);
+}
+		
+			</textarea>
+			<div class="flota col">
+				<div class="element element-tres">
+				</div>
+			</div>
+	</section>
+
+
+<script src="plugins/css-edit.js"></script>
+<script src="plugins/css-snippets.js"></script>
+<script src="plugins/css-controls.js"></script>
+<script src="plugins/incrementable.js"></script>
+<script src="for-demos.js"></script>
+
+	
 </body>
 </html>
