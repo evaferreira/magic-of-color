@@ -74,3 +74,7 @@ textarea{
 .element-cuatro:hover{
 	filter: hue-rotate(360deg);
 }
+
+.element-cinco{
+	background-color: rgb(255,0,0,20%);
+}
