@@ -257,7 +257,11 @@
 					<h2>Tan? Really?!</h2>
 				</section>
 
-				<!-- Not just funny and confusing names, also lacks consistency -->
+				<!--
+					Not just funny and confusing names, also lacks consistency 
+
+					Non-uniform, uses contradictory naming schemes, and the names it uses are completely arbitrary. Without any pattern to them, you have to remember all 147 color names individually.
+				-->
 				<section>
 					<h2>Lack of consistency</h2>
 				</section>
@@ -674,9 +678,100 @@
 					<h1>Color-Mod()</h1>
 				</section>
 
+				<section data-background-color="darkred">
+					<h2>Beware!</h2>
+				</section>
+
+				<section class="left">
+					<h2>Color Modifications to a
+						<span class="hey">base color</span>
+					</h2>
+					<ul class="fragment">
+						<li>hue</li>
+						<li>saturation</li>
+						<li>lightness</li>
+						<li>whiteness</li>
+						<li>blackness</li>
+					</ul>
+				</section>
+
+				<section class="left">
+					<h2>Color Modifications</h2>
+					<ul>
+						<li>tint</li>
+						<li>shade</li>
+						<li>blend</li>
+						<li>contrast</li>
+					</ul>
+				</section>
+
 				<section>
 					<h2>CSS Custom Properties</h2>
 				</section>
+
+				<!-- saturation and lightness with custom property -->
+				<section>
+					<h2>color-mod()</h2>
+					<pre><code data-trim>
+		.el{
+		  color: color-mod(var(--baseColor) s(-10%) w(30%));
+		}
+					</code></pre>
+				</section>
+
+				<!-- 10% lighter using hue value -->
+				<section>
+					<h2>color-mod()</h2>
+					<pre><code data-trim>
+		.el{
+		  color: color-mod(0deg tint(10%));
+		}
+					</code></pre>
+				</section>
+
+				<!-- Find white or black if contrast is 100%, minimum if 0% -->
+				<section>
+					<h2>color-mod()</h2>
+					<pre><code data-trim>
+		.el{
+		  /* Minimum contrast required by WCAG 2.0 Guidelines */
+		  color: color-mod(purple contrast(0%));
+		}
+					</code></pre>
+					<pre class="fragment"><code data-trim>
+		.el{
+		  /* Maximum contrast required by WCAG 2.0 Guidelines
+		  	 Black or White
+		  */
+		  color: color-mod(purple contrast(100%));
+		}
+					</code></pre>
+				</section>				
+
+				<!-- 
+					Editor's draft, not ready yet for implementation
+				-->
+				<section>
+					<h1>Awesome!</h1>
+					<h2>Can we use this?</h2>
+				</section>
+
+				<section data-background-color="#000">
+					<h2>Not even with PostCSS</h2>
+				</section>
+
+				<section><img src="img/color-me_test.gif" alt="Colorme.io website test"></section>
+
+				<section>
+					<h2>PostCSS plugin is outdated</h2>
+				</section>
+
+				<section data-background-color="#000">
+					<h1>No color-mod for now</h1>
+				</section>
+
+
+
 
 				<section>
 					<h1>Do NOT trust color</h1>
@@ -718,16 +813,14 @@
 
 					https://drafts.csswg.org/css-color/#contrast-adjuster
 
-					Does it work... anywhere? No.
-							Editor's draft, not ready yet for implementation
-
 					Can i use it? :evilsmile: Yes.
 							PostCSS, beware of un-updated CSS color() function
 								It might not be future-proof.
 
 					Color Android OS change accoding to preference
 
-					URL to spec -> GitHub
+					URL to spec -> GitHub -> Feedback
+						https://github.com/w3c/csswg-drafts/issues?q=is%3Aopen+is%3Aissue+label%3Acss-color-4
 
 					slider (range) for color, hsl, lightness up, black background
 					slider (range) for color, hsl, lightness down, light background
