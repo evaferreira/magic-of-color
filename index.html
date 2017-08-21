@@ -609,19 +609,19 @@
 
 				<section><img src="img/hwb-test1.gif" alt="HWB test using CSSNext plugin of PostCSS in Codepen"></section>
 
-				<section data-background-color="Orange">
+				<section data-background-color="gainsboro">
 					<h1>Gray() function</h1>
 				</section>
 
 				<section data-background-color="dimgrey">
-					<h1>Not grey()</h1>
+					<h1>Not gr<span class="hey">e</span>y()</h1>
 				</section>
 
 				<section>
 					<h2>Gray/A</h2>
 					<pre><code data-trim>
 		.el{
-		  color: gray(50);
+		  color: gray(50, 0.9);
 		}
 					</code></pre>
 				</section>
@@ -629,7 +629,7 @@
 				<section><img src="img/gray-test1.gif" alt="Gray() test using CSSNext plugin of PostCSS in Codepen"></section>
 
 				<section class="left">
-					<h2>Grays in our website</h2>
+					<h2>Grays in our websites</h2>
 					<ul class="font-mono">
 						<li>$graySuperLight</li>
 						<li>$grayLight</li>
@@ -641,7 +641,9 @@
 					</ul>
 				</section>
 
-				<section><img src="img/angry2.gif" alt="Angry person saying 'This doest work' at a computer"></section>
+				<section data-background-image="img/angry-computer.gif" class="white">
+					<h2>This cannot be solved with gray()</h2>
+				</section>
 
 				<section data-background-color="MediumSeaGreen">
 					<h1>Define grays with your team</h1>
@@ -654,10 +656,7 @@
 						Dear Designers:<br>
 						Developers are your friends.
 					</h2>
-				</section>
-
-				<section class="left">
-					<h2 class="hey">
+					<h2 class="hey fragment">
 						Dear Developers:<br>
 						Designers are your friends.
 					</h2>

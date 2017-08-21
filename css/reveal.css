@@ -1441,5 +1441,5 @@ body {
 .blue {
   color: blue; }
 
-.font-mono {
+.font-mono.font-mono {
   font-family: monospace; }
