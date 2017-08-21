@@ -562,34 +562,45 @@
 				<section class="left incomplete">
 					<h2>CSS Color Level 4</h2>
 					<ul>
-						<li><del>, lch & color</del></li>
+						<li><del>lab, lch & color</del></li>
 						<li>hwb()</li>
 						<li>gray()</li>
 						<li>color-mod()</li>
 					</ul>
 				</section>
 
+				<!-- Hue, whitness & blackness -->
 				<section data-background-color="crimson">
-					<h1>HWB</h1>
+					<h1>HWB()</h1>
 				</section>
 
-				<section class="incomplete" data-background-color="gold">
-					<h1>lab & lch</h1>
+				<section class="left">
+					<h2>HWB/A</h2>
+					<ul>
+						<li>Hue (0-360)</li>
+						<li>Whiteness (0-100%)</li>
+						<li>Blackness (0-100%)</li>
+					</ul>
 				</section>
 
-				<section class="incomplete" data-background-color="MediumSeaGreen">
-					<h1>Color() function</h1>
+				<section class="left">
+					<h2>HWB/A</h2>
+					<p>If white + black = 100% it defines an achromatic color/shade of gray, without any hue.</p>
+				</section>
+				
+				<!-- If white+black is equal to 100% (after normalization), it defines an achromatic color, or some shade of gray, without any hint of the chosen hue. -->
+				<section>
+					<h2>More intuitive</h2>
+					<img src="img/color-picker.png" alt="Color picker from Chrome, using HWB method">
 				</section>
 
-				<section class="incomplete" data-background-color="Indigo">
-					<h1>Why so many?</h1>
-				</section>
+				<section><img src="img/hwb-test1.gif" alt="HWB test using CSSNext plugin of PostCSS in Codepen"></section>
 
 				<section data-background-color="Orange">
 					<h1>Gray() function</h1>
 				</section>
 
-				<section data-background-color="MediumSeaGreen">
+				<section data-background-color="dimgrey">
 					<h1>Not grey()</h1>
 				</section>
 
@@ -600,14 +611,16 @@
 				<section><img src="img/styleguide.png" alt="Styleguide All The Things"></section>
 
 				<section class="left">
-					<h2 class="hey"><span class="fragment">Dear Designers:</span><br>
-						<span class="fragment">Developers are your friends.</span>
+					<h2 class="hey">
+						Dear Designers:<br>
+						Developers are your friends.
 					</h2>
 				</section>
 
 				<section class="left">
-					<h2 class="hey"><span class="fragment">Dear Developers:</span><br>
-						<span class="fragment">Designers are your friends.</span>
+					<h2 class="hey">
+						Dear Developers:<br>
+						Designers are your friends.
 					</h2>
 				</section>
 
@@ -615,6 +628,10 @@
 
 				<section class="incomplete" data-background-color="purple">
 					<h1>CSS Custom Properties</h1>
+				</section>
+
+				<section>
+					<h1>Do NOT trust color</h1>
 				</section>
 
 
