@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<title>Title, duh!</title>
+	<meta name="author" content="Here goes your name, you beautiful code-maker">
+
+	<link href="demo.css" rel="stylesheet">
+	<script src="prefixfree.min.js"></script>
+
+</head>
+<body class="fail">
+
+	
+	<section class="live demo slide example">
+			<textarea class="left col" spellcheck="false">
+h2{
+	color: #fff;
+	mix-blend-mode: exclusion;
+}
+			</textarea>
+			<div class="flota col">
+				<div class="wrapper">
+					<div class="hello">
+						<h2>One</h2>
+					</div>
+					<div class="hello">
+						<h2>Two</h2>
+					</div>
+					<div class="hello">
+						<h2>Three</h2>
+					</div>
+					<div class="hello">
+						<h2>Four</h2>
+					</div>
+					<div class="hello color" id="picker">
+						<h2>Five</h2>
+						<form>
+							<input type="color" id="pick" aria-label="Change Color">
+						</form>
+					</div>
+				</div>
+			</div>
+	</section>
+
+
+<script src="plugins/css-edit.js"></script>
+<script src="plugins/css-snippets.js"></script>
+<script src="plugins/css-controls.js"></script>
+<script src="plugins/incrementable.js"></script>
+<script src="for-demos.js"></script>
+
+<script>
+	function update(e) {
+		picker.style.backgroundColor = e.target.value;
+	};
+
+	pick.addEventListener('input', update, false);
+	pick.addEventListener('change', update, false);
+</script>
+
+	
+</body>
+</html>

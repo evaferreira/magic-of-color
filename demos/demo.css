@@ -26,6 +26,10 @@ textarea{
 	padding-top: 24px;
 }
 
+.fail textarea{
+	max-height: 320px;
+}
+
 .col{
 	flex-grow: 1;
 }
@@ -77,4 +81,52 @@ textarea{
 
 .element-cinco{
 	background-color: rgb(255,0,0,20%);
+}
+
+
+
+
+.fail .wrapper{
+	display: flex;
+	flex-wrap: wrap;
+}
+.fail .hello{
+	height: 15vh;
+	max-height: 200px;
+	min-height: 100px;
+	flex-grow: 1;
+	flex-basis: 50%;
+	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.fail h2{
+	font-family: sans-serif;
+	margin: 0;
+	color: #fff;
+	
+	mix-blend-mode: exclusion;
+}
+
+
+
+
+.fail .hello:nth-child(1){
+	background-color: orange;
+}
+.fail .hello:nth-child(2){
+	background-color: pink;
+}
+.fail .hello:nth-child(3){
+	background-color: aquamarine;
+}
+.fail .hello:nth-child(4){
+	background-color: darkred;
+}
+
+.fail .color{
+	background-color: black;
+	flex-direction: column;
 }
