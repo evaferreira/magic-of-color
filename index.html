@@ -873,12 +873,9 @@ body{
 					</ul>
 				</section>
 
-				<!--
-					Customization is cool, but we need to be careful
-				-->
 				<section>
-					<h2>Customization can turn inaccessible</h2>
-					<img src="img/customization.gif" alt="Twitter profile, animation of customization, choosing text color">
+					<h2>What if it isn't just the hue?</h2>
+					<p class="fragment">What if the brightness is unknown?</p>
 				</section>
 
 				<section>
@@ -886,8 +883,12 @@ body{
 					<p>Background-color & Text Color</p>
 				</section>
 
-				<section class="left incomplete">
-					<h2>What if we don't know how bright it'll be?</h2>
+				<!--
+					Customization is cool, but we need to be careful
+				-->
+				<section>
+					<h2>Customization can turn inaccessible</h2>
+					<img src="img/customization.gif" alt="Twitter profile, animation of customization, choosing text color">
 				</section>
 
 				<!-- Inverted colors can be helpful -->
@@ -899,11 +900,50 @@ body{
 					<h2>We need JavaScript</h2>
 				</section>
 
+				<section>
+					<h2>Find brightness value</h2>
+					<p>Apply <span class="font-mono">.dark</span> or <span class="font-mono">.light</span> accordingly</p>
+				</section>
 
+				<section>
+					<h2>Search the brightness value</h2>
+					<pre class="center"><code data-trim>
+	brightness = (color.r * 299 + color.g * 587 + color.b * 114 ) / 1000
+					</code></pre>
+				</section>
 
+				<section>
+					<h2>Find the brightness</h2>
+					<pre><code data-trim>
+rgb(40, 230, 30)     (Green)
+					</code></pre>
+					<pre class="fragment"><code data-trim>
+(40*299 + 230*587 + 30*144) / 1000 = 151.29
+					</code></pre>
+				</section>
 
+				<section>
+					<h2>Apply class accordingly</h2>
+					<pre><code data-trim>
+	if(brightness > 128){
+		// Apply #000 text color
+		el.classList.add("light-background");
+	} else {
+		// Apply #FFF text color
+		el.classList.add("dark-background");
+	}
+					</code></pre>
+				</section>
 
+				<section><img src="img/brightness.gif" alt="Contrast Ratio, checking black and white on green color"></section>
 
+				<section class="incomplete">
+					<h2>Demo armar</h2>
+				</section>
+
+				<section class="incomplete">
+					<h2>Color formats convertors</h2>
+				</section>
 
 				<section class="incomplete">
 					<h1>What if everything is customizable?</h1>
@@ -915,11 +955,19 @@ body{
 				</section>
 
 				<section class="incomplete">
+					<h2>Last remarkcs</h2>
+				</section>
+
+				<section class="incomplete">
 					<h1>Do NOT trust color</h1>
 				</section>
 
 				<section class="incomplete">
 					<h1>Media Queries</h1>
+				</section>
+
+				<section class="incomplete">
+					<h1>Give Feedback</h1>
 				</section>
 
 				<!-- 
@@ -938,18 +986,12 @@ body{
 						lighten -> HSL
 
 
-						
-	
-	/* Not available in Firfox */
-	--bgInvert: hsl(calc(var(--hue) + 180), 70%, 60%);
 					
 					https://codepen.io/thebabydino/pen/dzyopJ?limit=thebabydino&page=7&q=hsl
 
 					https://codepen.io/evaferreira/pen/BdxepP?editors=1111
 					
 					HSL Color in tables to indicate heat
-
-					No Accessibility twitter
 
 					ui preferences going to media queries
 
@@ -970,7 +1012,7 @@ body{
 							PostCSS, beware of un-updated CSS color() function
 								It might not be future-proof.
 
-					Color Android OS change accoding to preference
+					Color Android OS change according to preference
 
 					URL to spec -> GitHub -> Feedback
 						https://github.com/w3c/csswg-drafts/issues?q=is%3Aopen+is%3Aissue+label%3Acss-color-4
