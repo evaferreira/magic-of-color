@@ -86,11 +86,11 @@ textarea{
 
 
 
-.fail .wrapper{
+.fail .wrapper, .works .wrapper{
 	display: flex;
 	flex-wrap: wrap;
 }
-.fail .hello{
+.fail .hello, .works .hello{
 	height: 15vh;
 	max-height: 200px;
 	min-height: 100px;
@@ -127,6 +127,34 @@ textarea{
 }
 
 .fail .color{
+	background-color: black;
+	flex-direction: column;
+}
+
+.works h2{
+	font-family: sans-serif;
+	margin: 0;
+}
+.works .dark, .works .dark h2{
+	color: #FFF;
+}
+.works .light, .works .light h2{
+	color: #000;
+}
+.works .hello:nth-child(1){
+	background-color: chocolate;
+}
+.works .hello:nth-child(2){
+	background-color: hotpink;
+}
+.works .hello:nth-child(3){
+	background-color: cyan;
+}
+.works .hello:nth-child(4){
+	background-color: darkred;
+}
+
+.works .color{
 	background-color: black;
 	flex-direction: column;
 }

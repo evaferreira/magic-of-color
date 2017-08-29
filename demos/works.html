@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<title>Title, duh!</title>
+	<meta name="author" content="Here goes your name, you beautiful code-maker">
+
+	<link href="demo.css" rel="stylesheet">
+	<script src="prefixfree.min.js"></script>
+
+</head>
+<body class="works">
+
+	
+	<section class="live demo slide example">
+			<textarea class="left col" spellcheck="false">
+.dark{
+	color: #FFF;
+}
+.light{
+	color: #000;
+}
+			</textarea>
+			<div class="flota col">
+				<div class="wrapper">
+					<div class="hello dark">
+						<h2>One</h2>
+					</div>
+					<div class="hello light">
+						<h2>Two</h2>
+					</div>
+					<div class="hello light">
+						<h2>Three</h2>
+					</div>
+					<div class="hello dark">
+						<h2>Four</h2>
+					</div>
+					<div class="hello color" id="picker">
+						<h2>Five</h2>
+						<form>
+							<input type="color" id="pick" aria-label="Change Color">
+						</form>
+					</div>
+				</div>
+			</div>
+	</section>
+
+
+<script src="plugins/css-edit.js"></script>
+<script src="plugins/css-snippets.js"></script>
+<script src="plugins/css-controls.js"></script>
+<script src="plugins/incrementable.js"></script>
+<script src="for-demos.js"></script>
+
+<script>
+	function update(e) {
+		picker.style.backgroundColor = e.target.value;
+
+		colorToRgb(e.target.value);
+
+		var computedBackgroundStyle = window.getComputedStyle(picker).backgroundColor;
+
+		console.log(computedBackgroundStyle);
+
+		if (colorBrightness(computedBackgroundStyle) < 128) {
+			picker.classList.remove("light");
+			picker.classList.add("dark");
+		} else {
+			picker.classList.remove("dark");
+			picker.classList.add("light");
+		}
+	}
+
+	pick.addEventListener("input", update, false);
+	pick.addEventListener("change", update, false);
+
+	function colorToRgb(color) {
+		var hex3 = color.match(/^#([0-9a-f]{3})$/i);
+		if (hex3 && hex3[1]) {
+			hex3 = hex3[1];
+			return {
+				r: parseInt(hex3.charAt(0), 16) * 0x11,
+				g: parseInt(hex3.charAt(1), 16) * 0x11,
+				b: parseInt(hex3.charAt(2), 16) * 0x11
+			};
+		}
+
+		var hex6 = color.match(/^#([0-9a-f]{6})$/i);
+		if (hex6 && hex6[1]) {
+			hex6 = hex6[1];
+			return {
+				r: parseInt(hex6.substr(0, 2), 16),
+				g: parseInt(hex6.substr(2, 2), 16),
+				b: parseInt(hex6.substr(4, 2), 16)
+			};
+		}
+
+		var rgb = color.match(/^rgb\s*\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*\)$/i);
+		if (rgb) {
+			return {
+				r: parseInt(rgb[1], 10),
+				g: parseInt(rgb[2], 10),
+				b: parseInt(rgb[3], 10)
+			};
+		}
+
+		var rgba = color.match(
+			/^rgba\s*\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*\,\s*([\d]+|[\d]*.[\d]+)\s*\)$/i
+		);
+		if (rgba) {
+			return {
+				r: parseInt(rgba[1], 10),
+				g: parseInt(rgba[2], 10),
+				b: parseInt(rgba[3], 10),
+				a: parseFloat(rgba[4])
+			};
+		}
+
+		return null;
+	}
+
+	function colorBrightness(color) {
+		if (typeof color === "string") color = colorToRgb(color);
+
+		if (color) {
+			return (color.r * 299 + color.g * 587 + color.b * 114) / 1000;
+		}
+
+		return null;
+	}
+
+</script>
+
+	
+</body>
+</html>
