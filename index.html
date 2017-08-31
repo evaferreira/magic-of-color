@@ -912,10 +912,10 @@ body{
 					</code></pre>
 				</section>
 
-				<section>
+				<section data-background-color="rgb(40, 230, 30)">
 					<h2>Find the brightness</h2>
 					<pre><code data-trim>
-rgb(40, 230, 30)     (Green)
+rgb(40, 230, 30)
 					</code></pre>
 					<pre class="fragment"><code data-trim>
 (40*299 + 230*587 + 30*144) / 1000 = 151.29
@@ -942,8 +942,18 @@ rgb(40, 230, 30)     (Green)
 						<iframe sandbox="allow-scripts" src="demos/works.html"></iframe>
 				</section>
 				
+				<!-- According to this result we should apply white text color -->
+				<section data-background-color="rgb(71, 170, 22)">
+					<h2>Sometimes the system fails</h2>
+					<pre><code data-trim>
+rgb(71, 170, 22)     (Green)
+					</code></pre>
+					<pre class="fragment"><code data-trim>
+(71*299 + 170*587 + 22*144) / 1000 = 124.18
+					</code></pre>
+				</section>
+
 				<section class="incomplete">
-					<h2>Sometimes it doesnt work</h2>
 					<h2>Color difference > 500</h2>
 					<h2>Turn into HSL and lower/increase lightness for bg</h2>
 				</section>
