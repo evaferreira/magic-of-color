@@ -801,9 +801,17 @@
 
 				<!--
 					Controlled environment
+						By design and dev team, finite options
+
+					Ideal for:
+						. Brand
+						. Different types of clients
+						. User's pick (customization by user's, infinite options. Twitter)
+						. BBC news, BBC etc...
 				-->
 				<section>
-					<h2>Theming: controlled environment</h2>
+					<h2>Theming</h2>
+					<p>Controlled environment</p>
 					<img src="img/bbc-theming.png" alt="BBC news (red theme) and BBC sports (yellow theme)">
 				</section>
 
@@ -811,7 +819,8 @@
 					We might not know what will happen, must ensure A11y
 				-->
 				<section>
-					<h2>Customization: uncontrolled environment</h2>
+					<h2>Customization</h2>
+					<p>Uncontrolled environment</p>
 					<img src="img/customization.gif" alt="Twitter profile, animation of customization, choosing text color">
 				</section>
 
@@ -829,6 +838,7 @@
 		...
 	&lt;/body>
 					</code></pre>
+
 					<pre class="fragment"><code data-trim>
 body{
 	--bgHue: hsl(var(--hue), 80%, 40%);
@@ -839,20 +849,15 @@ body{
 	background-color: var(--bgHue);
 }
 					</code></pre>
-					<!--<a href="https://codepen.io/evaferreira/pen/BdxepP" target="_blank">Demo</a>-->
-				</section>
-
-
-				<!--
-					No problem if we go over 360, it will work anyway
-					Bug already reported
-				-->
-				<section>
-					<h2>Get the inverted color</h2>
-					<pre><code data-trim>
-	/* Not available in Firefox */
-	--bgInvert: hsl(calc(var(--hue) + 180), 70%, 60%);
+					
+					<pre class="fragment"><code data-trim>
+.menu-list_link{
+	color: #fff;
+	text-decoration: none;
+	background-color: var(--darken);
+}
 					</code></pre>
+					<!--<a href="https://codepen.io/evaferreira/pen/BdxepP" target="_blank">Demo</a>-->
 				</section>
 
 				<section>
@@ -874,15 +879,27 @@ body{
 				</section>
 
 				<!--
-					Cannot do full customization without sacrifizing AAA contrast
+					No problem if we go over 360, it will work anyway
+					Bug already reported
+				-->
+				<section>
+					<h2>Get the inverted color</h2>
+					<pre><code data-trim>
+	/* Not available in Firefox */
+	--bgInvert: hsl(calc(var(--hue) + 180), 70%, 60%);
+					</code></pre>
+				</section>
+
+				<!--
+					Cannot do full theming without sacrifizing AAA contrast
 				-->
 				<section class="left">
 					<h2>HSL + Custom Properties</h2>
 					<ul>
-						<li>Work great for theming</li>
-						<li>You can assure AAA contrast</li>
-						<li>Not enough customization</li>
-						<li>Bug present in Firefox</li>
+						<li class="fragment">Work great for theming</li>
+						<li class="fragment">You can assure AAA contrast</li>
+						<li class="fragment">Not enough customization</li>
+						<li class="fragment">Bug present in Firefox</li>
 					</ul>
 				</section>
 
@@ -905,7 +922,7 @@ body{
 
 				<section>
 					<h2>Accessibility</h2>
-					<p>Background-color & Text Color</p>
+					<p>Background-color & text color</p>
 				</section>
 
 				<section>
@@ -919,6 +936,9 @@ body{
 
 				<section>
 					<h2>We need JavaScript</h2>
+					<p>And black or white text*<br>
+						<span class="hey fragment">*Or vice versa.</span>
+					</p>
 				</section>
 
 				<section>
@@ -963,7 +983,10 @@ rgb(40, 230, 30)
 					<iframe sandbox="allow-scripts" src="demos/works.html"></iframe>
 				</section>
 				
-				<!-- According to this result we should apply white text color -->
+				<!-- 
+					According to this result we should apply white text color
+					 Same system reveal JS uses
+				-->
 				<section data-background-color="rgb(71, 170, 22)">
 					<h2>Sometimes the system fails</h2>
 					<pre><code data-trim>
@@ -996,9 +1019,9 @@ rgb(71, 170, 22)     (Green)
 					<h2>Color formats convertors</h2>
 				</section>
 
-				<section class="incomplete">
+				<section data-background-color="#000">
 					<h1>What if everything is customizable?</h1>
-					<p>Text color and BG color?</p>
+					<p>Text color and background-color?</p>
 				</section>
 
 				<section class="incomplete">
@@ -1022,13 +1045,6 @@ rgb(71, 170, 22)     (Green)
 				</section>
 
 				<!-- 
-
-
-					Reasons for theming (by design and dev team, finite options):
-						. Brand
-						. Different types of clients
-						. User's pick (customization by user's, infinite options. Twitter)
-						. BBC news, BBC etc...
 
 					Avoid if possible, only change UI, try to keep UX the same way.
 					Theming colors, only colors
