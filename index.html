@@ -720,7 +720,7 @@
 				</section>
 
 				<!-- saturation and lightness with custom property -->
-				<section>
+				<section data-background-color="#f24d4d">
 					<h2>color-mod()</h2>
 					<pre><code data-trim>
 		.el{
@@ -730,7 +730,7 @@
 				</section>
 
 				<!-- 10% lighter using hue value -->
-				<section>
+				<section data-background-color="#ff1c1c">
 					<h2>color-mod()</h2>
 					<pre><code data-trim>
 		.el{
@@ -740,12 +740,12 @@
 				</section>
 
 				<!-- Find white or black if contrast is 100%, minimum if 0% -->
-				<section>
+				<section data-background-color="#dec2de">
 					<h2>color-mod()</h2>
 					<pre><code data-trim>
 		.el{
-		  /* Minimum contrast required by WCAG 2.0 Guidelines */
-		  color: color-mod(purple contrast(0%));
+		  /* 0% Minimum contrast required by WCAG 2.0 Guidelines */
+		  color: color-mod(purple contrast(30%));
 		}
 					</code></pre>
 					<pre class="fragment"><code data-trim>
@@ -769,7 +769,7 @@
 				<!-- Plugin not updated -->
 				<section data-background-color="#000">
 					<h1>No.</h1>
-					<h2 class="fragment">Not even with PostCSS</h2>
+					<h2>Not even with PostCSS</h2>
 				</section>
 
 				<section class="left">
