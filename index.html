@@ -803,7 +803,7 @@
 					Controlled environment
 				-->
 				<section>
-					<h2>Theming</h2>
+					<h2>Theming: controlled environment</h2>
 					<img src="img/bbc-theming.png" alt="BBC news (red theme) and BBC sports (yellow theme)">
 				</section>
 
@@ -811,8 +811,12 @@
 					We might not know what will happen, must ensure A11y
 				-->
 				<section>
-					<h2>Customization</h2>
+					<h2>Customization: uncontrolled environment</h2>
 					<img src="img/customization.gif" alt="Twitter profile, animation of customization, choosing text color">
+				</section>
+
+				<section>
+					<h1>Theming</h1>
 				</section>
 
 				<section>
@@ -841,7 +845,6 @@ body{
 
 				<!--
 					No problem if we go over 360, it will work anyway
-
 					Bug already reported
 				-->
 				<section>
@@ -889,8 +892,7 @@ body{
 				</section>
 
 				<section>
-					<h2>Accessibility</h2>
-					<p>Background-color & Text Color</p>
+					<h1>Customization</h1>
 				</section>
 
 				<!--
@@ -899,6 +901,15 @@ body{
 				<section>
 					<h2>Customization can turn inaccessible</h2>
 					<img src="img/customization.gif" alt="Twitter profile, animation of customization, choosing text color">
+				</section>
+
+				<section>
+					<h2>Accessibility</h2>
+					<p>Background-color & Text Color</p>
+				</section>
+
+				<section>
+					<h2>Is CSS enough?</h2>
 				</section>
 
 				<!-- Inverted colors can be helpful -->
@@ -949,7 +960,7 @@ rgb(40, 230, 30)
 
 				<!-- Inverted colors can be helpful -->
 				<section class="iframe">
-						<iframe sandbox="allow-scripts" src="demos/works.html"></iframe>
+					<iframe sandbox="allow-scripts" src="demos/works.html"></iframe>
 				</section>
 				
 				<!-- According to this result we should apply white text color -->
@@ -968,10 +979,20 @@ rgb(71, 170, 22)     (Green)
 					<img src="img/contrast-white.png" alt="Contrast ratio green and white, gives AA with a 3 value">
 					<img class="fragment" src="img/contrast-black.png" alt="Contrast ratio green and black, gives AAA with a 7 value">
 				</section>
+				
+				<!-- Two things get into color contrast levels, not one -->
+				<section class="incomplete">
+					<h2>
+						<span class="fragment">Brightness value</span> + 
+						<span class="fragment">Color difference</span>
+					</h2>
+				</section>
 
 				<section class="incomplete">
 					<h2>Turn into HSL and modify Lightness</h2>
-					<h2>Color difference</h2>
+				</section>
+
+				<section class="incomplete">
 					<h2>Color formats convertors</h2>
 				</section>
 
