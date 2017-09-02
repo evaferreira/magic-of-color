@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<title>Title, duh!</title>
+	<meta name="author" content="Here goes your name, you beautiful code-maker">
+
+	<link href="demo.css" rel="stylesheet">
+	<script src="prefixfree.min.js"></script>
+
+</head>
+<body class="works2">
+
+	
+	<section class="live demo slide example">
+			<div class="flota col">
+				<div class="wrapper">
+					<div class="hello dark">
+						<h2>One</h2>
+					</div>
+					<div class="hello light">
+						<h2>Two</h2>
+					</div>
+					<div class="hello color" id="picker">
+						<h2>Three</h2>
+						<form>
+							<input type="color" id="pick" aria-label="Change Color">
+						</form>
+					</div>
+				</div>
+				<p class="value">Brightness: <span id="valueBrightness"></span></p>
+				<p class="value" id="oldValue"></p><p class="value" id="newValue"></p>
+			</div>
+	</section>
+
+
+<script src="plugins/css-edit.js"></script>
+<script src="plugins/css-snippets.js"></script>
+<script src="plugins/css-controls.js"></script>
+<script src="plugins/incrementable.js"></script>
+<script src="for-demos.js"></script>
+
+<script>
+	// From revealJS mostly -> https://github.com/hakimel/reveal.js/blob/master/js/reveal.js
+
+function update(e) {
+	picker.style.backgroundColor = e.target.value;
+
+	var computedBackgroundStyle = colorToRgb(e.target.value);
+	brightness = Math.floor(colorBrightness(computedBackgroundStyle));
+	valueBrightness.innerHTML = brightness;
+	
+	if (brightness >= 115 && brightness <= 135){
+		
+		getHslDarken(computedBackgroundStyle);
+		picker.style.backgroundColor = getHslDarken(computedBackgroundStyle);
+		picker.classList.remove("light");
+		picker.classList.add("dark");
+		
+	} else if (brightness < 115) {
+		picker.classList.remove("light");
+		picker.classList.add("dark");
+		
+		oldValue.innerHTML = "";
+		newValue.innerHTML = "";
+		
+	} else if (brightness > 135)  {
+		picker.classList.remove("dark");
+		picker.classList.add("light");
+		
+		oldValue.innerHTML = "";
+		newValue.innerHTML = "";
+	}
+}
+
+pick.addEventListener("change", update, false);
+pick.addEventListener("input", update, false);
+
+
+function colorToRgb(color) {
+	var hex3 = color.match(/^#([0-9a-f]{3})$/i);
+	if (hex3 && hex3[1]) {
+		hex3 = hex3[1];
+		return {
+			r: parseInt(hex3.charAt(0), 16) * 0x11,
+			g: parseInt(hex3.charAt(1), 16) * 0x11,
+			b: parseInt(hex3.charAt(2), 16) * 0x11
+		};
+	}
+
+	var hex6 = color.match(/^#([0-9a-f]{6})$/i);
+	if (hex6 && hex6[1]) {
+		hex6 = hex6[1];
+		return {
+			r: parseInt(hex6.substr(0, 2), 16),
+			g: parseInt(hex6.substr(2, 2), 16),
+			b: parseInt(hex6.substr(4, 2), 16)
+		};
+	}
+
+	var rgb = color.match(/^rgb\s*\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*\)$/i);
+	if (rgb) {
+		return {
+			r: parseInt(rgb[1], 10),
+			g: parseInt(rgb[2], 10),
+			b: parseInt(rgb[3], 10)
+		};
+	}
+
+	var rgba = color.match(
+		/^rgba\s*\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*\,\s*([\d]+|[\d]*.[\d]+)\s*\)$/i
+	);
+	if (rgba) {
+		return {
+			r: parseInt(rgba[1], 10),
+			g: parseInt(rgba[2], 10),
+			b: parseInt(rgba[3], 10),
+			a: parseFloat(rgba[4])
+		};
+	}
+
+	return null;
+}
+
+function getHslDarken(currentCol){
+	return rgbToHsl(currentCol.r, currentCol.g, currentCol.b);
+}
+
+
+function rgbToHsl(r, g, b) {
+  r /= 255, g /= 255, b /= 255;
+
+  var max = Math.max(r, g, b), min = Math.min(r, g, b);
+  var h, s, l = (max + min) / 2;
+
+  if (max == min) {
+    h = s = 0; // achromatic
+  } else {
+    var d = max - min;
+    s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+
+    switch (max) {
+      case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+      case g: h = (b - r) / d + 2; break;
+      case b: h = (r - g) / d + 4; break;
+    }
+
+    h /= 6;
+  }
+
+	hue = Math.floor(h * 360);
+	saturation = Math.floor(s * 100);
+	lightness = Math.floor(l * 100 - 20);
+	
+	// Apply color
+
+  result = "hsl(" + hue + ", " + saturation + "%, " + lightness + "%)";
+  old = "hsl(" + hue + ", " + saturation + "%, " + Math.floor(l * 100) + "%)";
+	
+	oldValue.innerHTML = "Original: <span class='mono'>" + old + "</span>";
+	newValue.innerHTML = "New: <span class='mono'>" +  result + "</span>";
+	
+	return result;
+}
+
+
+function colorBrightness(color) {
+	if (typeof color === "string") color = colorToRgb(color);
+
+	if (color) {
+		return (color.r * 299 + color.g * 587 + color.b * 114) / 1000;
+	}
+
+	return null;
+}
+
+
+</script>
+
+	
+</body>
+</html>

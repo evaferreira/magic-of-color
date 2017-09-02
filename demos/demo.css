@@ -86,11 +86,11 @@ textarea{
 
 
 
-.fail .wrapper, .works .wrapper{
+.fail .wrapper, .works .wrapper, .works2 .wrapper{
 	display: flex;
 	flex-wrap: wrap;
 }
-.fail .hello, .works .hello{
+.fail .hello, .works .hello, .works2 .hello{
 	height: 15vh;
 	max-height: 200px;
 	min-height: 100px;
@@ -131,14 +131,16 @@ textarea{
 	flex-direction: column;
 }
 
-.works h2{
+.works h2, .works2 h2{
 	font-family: sans-serif;
 	margin: 0;
 }
-.works .dark, .works .dark h2{
+.works .dark, .works .dark h2,
+.works2 .dark, .works2 .dark h2{
 	color: #FFF;
 }
-.works .light, .works .light h2{
+.works .light, .works .light h2,
+.works2 .light, .works2 .light h2{
 	color: #000;
 }
 .works .hello:nth-child(1){
@@ -157,4 +159,43 @@ textarea{
 .works .color{
 	background-color: black;
 	flex-direction: column;
+}
+
+
+.works2 .hello:nth-child(1){
+	background-color: chocolate;
+}
+.works2 .hello:nth-child(2){
+	background-color: hotpink;
+}
+
+.works2 .color{
+	background-color: black;
+	flex-direction: column;
+}
+
+.works2 .value{
+	display: block;
+	margin-top: 20px;
+	text-align: center;
+	font-size: 1.6em;
+	font-family: sans-serif;
+	color: #333;
+}
+.works2 .value:nth-of-type(2){
+	margin-bottom: 0;
+}
+.works2 .value:nth-of-type(3){
+	margin-top: 5px;
+}
+
+.works2 .mono{
+	font-family: monospace;
+	color: #000;
+	font-size: 1.25em;
+}
+
+.works2 input{
+	width: 100px;
+	height: 40px;
 }
