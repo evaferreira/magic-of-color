@@ -828,6 +828,7 @@
 
 				<section>
 					<img src="img/custom-prop.gif" alt="Webpage that changes color with a range input">
+					<a href="https://codepen.io/thebabydino/pen/dzyopJ?limit=thebabydino&page=7&q=hsl" target="_blank" class="demo-link">Original pen by Ana Tudor</a>
 				</section>
 
 				<section>
@@ -843,7 +844,6 @@ body{
 	--darken: hsl(var(--hue), 90%, 20%);
 	--lighten: hsl(var(--hue), 90%, 80%);
 
-	font-family: sans-serif;
 	background-color: var(--bgHue);
 }
 					</code></pre>
@@ -851,11 +851,10 @@ body{
 					<pre class="fragment"><code data-trim>
 .menu-list_link{
 	color: #fff;
-	text-decoration: none;
 	background-color: var(--darken);
 }
 					</code></pre>
-					<!--<a href="https://codepen.io/evaferreira/pen/BdxepP" target="_blank">Demo</a>-->
+					<a href="https://codepen.io/evaferreira/pen/BdxepP" target="_blank" class="demo-link">Check out final demo</a>
 				</section>
 
 				<section>
@@ -882,7 +881,7 @@ body{
 				-->
 				<section>
 					<h2>Get the inverted color</h2>
-					<pre><code data-trim>
+					<pre><code data-trim class="language-css">
 	/* Not available in Firefox */
 	--bgInvert: hsl(calc(var(--hue) + 180), 70%, 60%);
 					</code></pre>
@@ -897,7 +896,9 @@ body{
 						<li class="fragment">Work great for theming</li>
 						<li class="fragment">You can assure AAA contrast</li>
 						<li class="fragment">Not enough customization</li>
-						<li class="fragment">Bug present in Firefox</li>
+						<li class="fragment">
+							<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1317354" target="_blank">Bug present in Firefox</a>
+						</li>
 					</ul>
 				</section>
 
@@ -927,7 +928,7 @@ body{
 					<h2>Is CSS enough?</h2>
 				</section>
 
-				<!-- Inverted colors can be helpful -->
+				<!-- Inverted colors can be helpful, but we cannot ensure contrast nor trust the result color -->
 				<section class="iframe">
 					<iframe sandbox="allow-scripts" src="demos/fail.html"></iframe>
 				</section>
@@ -1009,9 +1010,39 @@ rgb(71, 170, 22)     (Green)
 					</h2>
 				</section>
 
-				<section class="incomplete">
+				<section>
 					<h2>Turn into HSL and modify Lightness</h2>
 					<p>Between values 115 and 135</p>
+				</section>
+
+				<section>
+					<h2>Turn into HSL and modify Lightness</h2>
+					<pre><code data-trim>
+	if (brightness >= 115 && brightness <= 135){
+		// Turn lightness down a 20%
+		el.style.backgroundColor = getHslDarken( originalBackgroundStyle );
+
+	} else if (brightness < 115) {
+		// Apply #FFF text color
+		el.classList.add("dark-background");
+
+	} else if (brightness > 135)  {
+		// Apply #000 text color
+		el.classList.add("light-background");
+	}
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Turn into HSL and modify Lightness</h2>
+					<pre><code class="language-js">
+// Turn lightness down a 20%
+lightness = Math.floor(l * 100 - 20);
+	
+// Apply color
+result = "hsl(" + hue + ", " + saturation + "%, " + lightness + "%)";
+return result;
+					</code></pre>
 				</section>
 
 				<!-- Inverted colors can be helpful -->
@@ -1019,21 +1050,22 @@ rgb(71, 170, 22)     (Green)
 					<iframe sandbox="allow-scripts" src="demos/works2.html"></iframe>
 				</section>
 
-				<section class="incomplete">
+				<section class="left">
 					<h2>Color formats convertors</h2>
 					<ul>
 						<li>Color Conversion Algorithms by MJackson -
 							<a href="https://gist.github.com/mjackson/5311256" target="_blank">GitHub</a>
 						</li>
 						<li>Some conversion codes available on the
-							<a href="https://www.w3.org/TR/css-color-4/#toc">spec</a>
+							<a href="https://www.w3.org/TR/css-color-4/#toc" target="_blank">W3C spec</a>
 						</li>
+						<li>This demo's code on <a href="https://codepen.io/evaferreira/pen/RZvYWp" target="_blank">Codepen</a></li>
 					</ul>
 				</section>
 
 				<section data-background-color="#000">
 					<h1>What if everything is customizable?</h1>
-					<p>Text color and background-color?</p>
+					<p>Text color & background-color</p>
 				</section>
 
 				<section class="incomplete">
@@ -1065,31 +1097,11 @@ rgb(71, 170, 22)     (Green)
 						lighten -> HSL
 
 
-					
-					https://codepen.io/thebabydino/pen/dzyopJ?limit=thebabydino&page=7&q=hsl
-
 					https://codepen.io/evaferreira/pen/BdxepP?editors=1111
 					
 					HSL Color in tables to indicate heat
 
 					ui preferences going to media queries
-
-					contrast with blend modes?
-						Sometimes. White text is your friend. Font-size is your friend
-
-					Converting: https://drafts.csswg.org/css-color/#hsl-to-rgb
-					sass can get you the % of r / g / b
-
-					data viz -> color (--var) send var through JS apply saturation/lightness
-
-					RGB without commas -> Works in Firefox 
-						background: rgb(157 23 12 / 20%);
-
-					https://drafts.csswg.org/css-color/#contrast-adjuster
-
-					Can i use it? :evilsmile: Yes.
-							PostCSS, beware of un-updated CSS color() function
-								It might not be future-proof.
 
 					Color Android OS change according to preference
 

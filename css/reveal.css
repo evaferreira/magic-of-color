@@ -1446,3 +1446,8 @@ body {
 
 .center.center {
   text-align: center; }
+
+.demo-link.demo-link {
+  display: block;
+  margin-top: 15px;
+  font-size: 0.5em; }

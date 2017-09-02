@@ -29,6 +29,9 @@ textarea{
 .fail textarea{
 	max-height: 320px;
 }
+.works textarea{
+	max-height: 300px;
+}
 
 .col{
 	flex-grow: 1;
