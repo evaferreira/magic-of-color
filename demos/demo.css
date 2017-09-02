@@ -156,20 +156,7 @@ textarea{
 	background-color: darkred;
 }
 
-.works .color{
-	background-color: black;
-	flex-direction: column;
-}
-
-
-.works2 .hello:nth-child(1){
-	background-color: chocolate;
-}
-.works2 .hello:nth-child(2){
-	background-color: hotpink;
-}
-
-.works2 .color{
+.works .color, .works2 .color{
 	background-color: black;
 	flex-direction: column;
 }
