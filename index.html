@@ -122,10 +122,6 @@
 				</section>
 
 				<section>
-					<h2>But a rebellion was imminent.</h2>
-				</section>
-
-				<section>
 					<img src="img/first-website.png" alt="First HTML page">
 				</section>
 
@@ -482,6 +478,7 @@
 					<h2>HSL/A</h2>
 					<ul>
 						<li>Specific</li>
+						<li>Kinda intuitive</li>
 						<li>Alpha works everywhere</li>
 						<li>Hard to remember</li>
 						<li class="fragment">Easy to modify</li>
@@ -521,11 +518,6 @@
 				</section>
 
 				<section><img src="img/optional-commas.png" alt="Unknown caniuse.com table"></section>
-
-				<section class="iframe">
-					<h2>Optional commas</h2>
-					<iframe src="demos/commas.html"></iframe>
-				</section>
 
 				<section class="left">
 					<h2>CSS Color Level 4</h2>
@@ -586,6 +578,16 @@
 						<li>Theming</li>
 						<li>Customization</li>
 						<li>Accessibility</li>
+					</ul>
+				</section>
+
+				<section class="left">
+					<h2>CSS Color Level 4</h2>
+					<ul>
+						<li><del>lab, lch, color</del></li>
+						<li>hwb</li>
+						<li>gray</li>
+						<li>color-mod</li>
 					</ul>
 				</section>
 
@@ -685,7 +687,8 @@
 					<h1>Color-Mod()</h1>
 				</section>
 
-				<section data-background-color="darkred">
+				<!-- Add screenshot caniuse github -->
+				<section data-background-color="darkred incomplete">
 					<h2>Beware!</h2>
 				</section>
 
@@ -1020,6 +1023,8 @@ rgb(71, 170, 22)     (Green)
 	if (brightness >= 115 && brightness <= 135){
 		// Turn lightness down a 20%
 		el.style.backgroundColor = getHslDarken( originalBackgroundStyle );
+		// Apply #FFF text color
+		el.classList.add("dark-background");
 
 	} else if (brightness < 115) {
 		// Apply #FFF text color
