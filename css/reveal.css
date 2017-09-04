@@ -1451,3 +1451,14 @@ body {
   display: block;
   margin-top: 15px;
   font-size: 0.5em; }
+
+.os-imgs.os-imgs {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  /* Shh */
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
