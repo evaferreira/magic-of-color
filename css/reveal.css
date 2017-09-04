@@ -1462,3 +1462,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
+
+.no-item.no-item {
+  list-style-type: none; }
+
+.large-img.large-img {
+  width: 350px; }
